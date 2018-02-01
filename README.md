@@ -1,5 +1,5 @@
 # Ionic-plugin-MyKadReader
-Ionic or Cordova plugin to read info from MyKad (Malaysia ID card)
+Ionic or Cordova plugin to read info from MyKad (Malaysia ID card) using PocketMate Smart Card Reader.
 
 Please refer to Docs folder for more detail on how to read the data. There is a reference manual and a website link. The code is quite robust and have been implemented for more than 2 years.
 
