@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        id="MyKadReader"
+        version="0.2">
+
+  <name>MyKadReader</name>
+  <description> Plug in to use with ACR38U smart card reader device by ACS, to read Malaysia IC, myKad </description>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/MyKadReader.js" target="js/MyKadReader.js"/>
+
+  <js-module src="www/MyKadReader.js" name="MyKadReader">
+    <clobbers target="MyKadReader" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MyKadPlugin">
+        <param name="android-package" value="smartcard.redone.com.mykad.MyKadPlugin"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/MyKadPlugin.java" 	target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/MyKad_JPN.java" 		target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/MyKad_Data.java" 		target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/MyKad.java" 			target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/Helper.java" 			target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/CardReader.java" 		target-dir="src/smartcard/redone/com/mykad/"/>
+    <source-file src="src/android/acssmc-1.1.2.jar" 	target-dir="libs"/>
+  </platform>
+
+</plugin>
